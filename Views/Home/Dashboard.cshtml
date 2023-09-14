@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    Welcome @Context.Session.GetString("Name");
+<div>
+    <form method="post" action="Logout"><button >Log Out</button></form>
+    
+</div>
+
+<h1>@Context.Session.GetInt32("Number")</h1>
+<form action="PlusOne" method="post"><button>+1</button></form>
+<form action="MinusOne" method="post"><button>-1</button></form>
+<form action="TimesTwo" method="post"><button>*2</button></form>
+<form action="PlusRandom" method="post"><button>+Random</button></form>
